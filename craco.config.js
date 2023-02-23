@@ -1,6 +1,6 @@
-const CracoAntDesignPlugin = require("craco-antd");
+const CracoAntDesignPlugin = require('craco-antd');
 
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   plugins: [
