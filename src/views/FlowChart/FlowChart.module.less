@@ -1,0 +1,278 @@
+.chart {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-image: linear-gradient(90deg, hsla(0, 0%, 86.3%, 0.5) 6%, transparent 0),
+    linear-gradient(hsla(0, 0%, 75.3%, 0.5) 6%, transparent 0);
+  background-size: 16px 16px;
+  :global {
+    ::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
+    // bpmn-icon
+    .bjs-powered-by {
+      color: rgb(64, 64, 64);
+      position: absolute;
+      bottom: 15px;
+      z-index: 100;
+      // display: none; // 隐藏logo
+    }
+
+    // 左侧工具栏
+    .djs-palette {
+      width: 50px !important;
+      border: none;
+      background-color: #fff;
+      box-shadow: 0 0px 10px rgb(0 0 0 / 40%);
+      position: fixed;
+      top: 65px;
+      left: 20;
+    }
+
+    .djs-palette .entry img {
+      width: 35px !important;
+    }
+
+    // .djs-connection,
+    // .djs-drag-active {
+    //   path {
+    //     stroke: rgb(166, 166, 166) !important;
+    //     marker-end: url(#default) !important;
+    //     // stroke-dasharray: 8 !important; //间隔多少像素绘制一次  虚线
+    //   }
+    // }
+
+    // 箭头样式
+    // #default {
+    //   fill: rgb(166, 166, 166) !important;
+    //   stroke: rgb(166, 166, 166) !important;
+    // }
+
+    // .djs-label {
+    //   stroke-width: 30px !important;
+    // }
+
+    // .djs-segment-dragger.vertical .djs-hit {
+    //   cursor: ew-resize;
+    // }
+
+    // .djs-element.selected .djs-outline {
+    //   stroke: var(--element-hover-outline-fill-color) !important;
+    // }
+
+    // .djs-element.hover .djs-outline,
+    // .djs-element.selected .djs-outline {
+    //   stroke-dasharray: 3, 3 !important;
+    // }
+
+    .start:hover,
+    .approve:hover,
+    .judge:hover,
+    .wait:hover,
+    .branch:hover,
+    .merge:hover,
+    .program:hover,
+    .notice:hover,
+    .refuse:hover,
+    .end:hover,
+    .icon-lasso:hover {
+      cursor: pointer;
+    }
+
+    .icon-lasso:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 0;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      text-align: center;
+      color: #1da57a;
+    }
+
+    .start:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      text-align: center;
+      color: #1da57a;
+    }
+
+    .approve:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46px * 2px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    .judge:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 3px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    // .wait:hover::after {
+    //   content: attr(title);
+    //   width: 150px;
+    //   font-size: 14px;
+    //   display: flex;
+    //   position: absolute;
+    //   top: 46 * 4px;
+    //   margin-left: 60px;
+    //   padding: 0 60%;
+    //   text-align: center;
+    //   background-color: white;
+    //   border-radius: 10px;
+    //   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    //   border: 1px solid #ccc;
+    //   color: #1da57a;
+    // }
+    .branch:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 4px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    .merge:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 5px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    // .program:hover::after {
+    //   content: attr(title);
+    //   width: 150px;
+    //   font-size: 14px;
+    //   display: flex;
+    //   position: absolute;
+    //   top: 46 * 7px;
+    //   margin-left: 60px;
+    //   padding: 0 60%;
+    //   text-align: center;
+    //   background-color: white;
+    //   border-radius: 10px;
+    //   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+    //   border: 1px solid #ccc;
+    //   color: #1da57a;
+    // }
+    .notice:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 6px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    .refuse:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 7px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+    .end:hover::after {
+      content: attr(title);
+      width: 150px;
+      font-size: 14px;
+      display: flex;
+      position: absolute;
+      top: 46 * 8px;
+      margin-left: 60px;
+      padding: 0 60%;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+      border: 1px solid #ccc;
+      color: #1da57a;
+    }
+  }
+
+  .chartContainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  // 画布上方的button
+  .buttons {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    display: flex;
+    list-style: none;
+    z-index: 100;
+  }
+}

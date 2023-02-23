@@ -1,10 +1,6 @@
 import React from "react";
-import { Button } from "antd";
+import FlowChart from "./views/FlowChart/FlowChart";
 
 export default function App() {
-  return (
-    <div>
-      <Button type="primary">click</Button>
-    </div>
-  );
+  return <FlowChart />;
 }

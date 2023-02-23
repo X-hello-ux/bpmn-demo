@@ -1,0 +1,254 @@
+@font-face {
+  font-family: 'iconfont'; /* Project id 3516774 */
+  src: url('//at.alicdn.com/t/c/font_3516774_peoy25xkhxf.woff2?t=1669794417542') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3516774_peoy25xkhxf.woff?t=1669794417542') format('woff'),
+    url('//at.alicdn.com/t/c/font_3516774_peoy25xkhxf.ttf?t=1669794417542') format('truetype');
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-attribute-setting:before {
+  content: '\e66e';
+}
+
+.icon-attribute-definition:before {
+  content: '\e6b0';
+}
+
+.icon-lasso:before {
+  content: '\e677';
+}
+
+.icon-notice:before {
+  content: '\e617';
+}
+
+.icon-end:before {
+  content: '\e618';
+}
+
+.icon-Processed:before {
+  content: '\e614';
+}
+
+.icon-icon-Unread:before {
+  content: '\e613';
+}
+
+.icon-icon-Read:before {
+  content: '\e615';
+}
+
+.icon-icon-Pending:before {
+  content: '\e616';
+}
+
+.icon-doubt:before {
+  content: '\e64b';
+}
+
+.icon-Edit-Page:before {
+  content: '\e612';
+}
+
+.icon-Search-Page:before {
+  content: '\e62b';
+}
+
+.icon-icon-Kanban-Page:before {
+  content: '\e764';
+}
+
+.icon-fileEmpty:before {
+  content: '\eabf';
+}
+
+.icon-folder:before {
+  content: '\e689';
+}
+
+.icon-open-a-folder:before {
+  content: '\eabe';
+}
+
+.icon-export:before {
+  content: '\e662';
+}
+
+.icon-program:before {
+  content: '\7a0b';
+}
+
+.icon-API-test:before {
+  content: '\e669';
+}
+
+.icon-Ordered-list:before {
+  content: '\e67e';
+}
+
+.icon-Personnel-Query:before {
+  content: '\e611';
+}
+
+.icon-file:before {
+  content: '\e637';
+}
+
+.icon-test:before {
+  content: '\e8ad';
+}
+
+.icon-Console:before {
+  content: '\e651';
+}
+
+.icon-code:before {
+  content: '\e64f';
+}
+
+.icon-Value-Set:before {
+  content: '\e650';
+}
+
+.icon-excel:before {
+  content: '\ea45';
+}
+
+.icon-configuration-file:before {
+  content: '\e747';
+}
+
+.icon-role:before {
+  content: '\e610';
+}
+
+.icon-Workflow:before {
+  content: '\e6c4';
+}
+
+.icon-Workflow-Testing:before {
+  content: '\e648';
+}
+
+.icon-system-configuration:before {
+  content: '\e6b8';
+}
+
+.icon-set-up:before {
+  content: '\e8b8';
+}
+
+.icon-work:before {
+  content: '\e60f';
+}
+
+.icon-Organizational-security:before {
+  content: '\e60e';
+}
+
+.icon-Api-security:before {
+  content: '\e60d';
+}
+
+.icon-function:before {
+  content: '\e653';
+}
+
+.icon-business:before {
+  content: '\e7de';
+}
+
+.icon-structure:before {
+  content: '\ea00';
+}
+
+.icon-role-management:before {
+  content: '\e60c';
+}
+
+.icon-journal:before {
+  content: '\e69d';
+}
+
+.icon-service:before {
+  content: '\eaca';
+}
+
+.icon-api:before {
+  content: '\e71c';
+}
+
+.icon-user-management:before {
+  content: '\e664';
+}
+
+.icon-page:before {
+  content: '\e634';
+}
+
+.icon-Concurrent:before {
+  content: '\e938';
+}
+
+.icon-menu:before {
+  content: '\e632';
+}
+
+.icon-production:before {
+  content: '\e607';
+}
+
+.icon-equipment:before {
+  content: '\e608';
+}
+
+.icon-Work-Center:before {
+  content: '\e609';
+}
+
+.icon-group:before {
+  content: '\e60a';
+}
+
+.icon-Center:before {
+  content: '\e60b';
+}
+
+.icon-Business-Division:before {
+  content: '\e606';
+}
+
+.icon-department:before {
+  content: '\e600';
+}
+
+.icon-legal-person:before {
+  content: '\e601';
+}
+
+.icon-cause:before {
+  content: '\e602';
+}
+
+.icon-Business-Organization:before {
+  content: '\e603';
+}
+
+.icon-factory:before {
+  content: '\e604';
+}
+
+.icon-HR:before {
+  content: '\e605';
+}
+
+.icon-assets:before {
+  content: '\e74b';
+}

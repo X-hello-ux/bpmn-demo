@@ -16,7 +16,7 @@ module.exports = {
     },
   ],
   // 路径别名
-  alias: {
-    "@": path.resolve(__dirname, "src"),
-  },
+  // alias: {
+  //   "@": path.resolve(__dirname, "src"),
+  // },
 };
