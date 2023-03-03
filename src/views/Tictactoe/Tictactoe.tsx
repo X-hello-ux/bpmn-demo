@@ -2,8 +2,6 @@ import React from 'react';
 import './style.less';
 
 export default function Game(): JSX.Element {
-  document.title = '井字棋';
-
   const BoxStyle = {
     display: 'flex',
     justifyContent: 'center',
@@ -47,21 +45,25 @@ export default function Game(): JSX.Element {
       count === 9 ? (status = 'The game was not settled !') : (status = 'Next player: ' + xIsNext);
     }
 
+    const reset = () => {
+      setCount(0);
+      setXisNext('');
+      setSquares([]);
+      setStatus('');
+    };
+
     return (
       <div>
         <div style={{ display: 'flex' }}>
           <div className="status">{status}</div>
           {count === 9 && !winner && (
-            <button
-              style={{ marginLeft: 20 }}
-              onClick={() => {
-                setCount(0);
-                setXisNext('');
-                setSquares([]);
-                setStatus('');
-              }}
-            >
+            <button style={{ marginLeft: 20 }} onClick={() => reset()}>
               Reset
+            </button>
+          )}
+          {winner && (
+            <button style={{ marginLeft: 20 }} onClick={() => reset()}>
+              Again
             </button>
           )}
         </div>
