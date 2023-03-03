@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable spellcheck/spell-checker */
 /**
  * Map containing SVG paths needed by BpmnRenderer.

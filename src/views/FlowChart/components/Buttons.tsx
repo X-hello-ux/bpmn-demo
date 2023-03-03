@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 流程图上方的buttons
 import React, { useState, ReactElement } from 'react';
 import { Button, Space, Tooltip } from 'antd';

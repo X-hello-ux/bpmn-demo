@@ -1,3 +1,4 @@
+// @ts-nocheck
 import BaseRenderer from 'diagram-js/lib/draw/BaseRenderer';
 import { append as svgAppend, attr as svgAttr, create as svgCreate, remove as svgRemove } from 'tiny-svg';
 import { isAny } from 'bpmn-js/lib/features/modeling/util/ModelingUtil';

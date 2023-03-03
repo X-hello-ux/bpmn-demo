@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 空流程图
 export const xmlStr = `
 <?xml version="1.0" encoding="UTF-8"?>

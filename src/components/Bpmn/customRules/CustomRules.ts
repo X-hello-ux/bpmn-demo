@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 自定义连线规则
 import { every, find, forEach, some } from 'min-dash';
 

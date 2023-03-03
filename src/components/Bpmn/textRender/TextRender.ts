@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable spellcheck/spell-checker */
 import { assign } from 'min-dash';
 

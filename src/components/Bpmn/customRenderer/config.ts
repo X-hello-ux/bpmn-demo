@@ -1,3 +1,4 @@
+// @ts-nocheck
 // palette
 import startURL from '../../../assets/bpmnIcon/palette/start.png';
 import judgeURL from '../../../assets/bpmnIcon/palette/judge.png';

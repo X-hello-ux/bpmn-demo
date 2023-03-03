@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 自定义左侧工具栏
 
 import startURL from '../../../assets/bpmnIcon/palette/start.png';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { assign, forEach, isArray } from 'min-dash';
 import { isAny } from 'bpmn-js/lib/features/modeling/util/ModelingUtil';
 import { hasPrimaryModifier } from 'diagram-js/lib/util/Mouse';

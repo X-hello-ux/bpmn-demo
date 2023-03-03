@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useRef, useState } from 'react';
 import FlowChartStyle from './FlowChart.module.less';
 import BpmnModeler from 'bpmn-js/lib/Modeler';

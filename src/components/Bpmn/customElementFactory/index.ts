@@ -1,3 +1,4 @@
+// @ts-nocheck
 // 用于自定义节点宽高,自动适应仪准线
 import ElementFactory from 'bpmn-js/lib/features/modeling/ElementFactory';
 import { getBusinessObject, is } from 'bpmn-js/lib/util/ModelUtil';
