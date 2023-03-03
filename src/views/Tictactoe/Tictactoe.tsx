@@ -23,15 +23,17 @@ export default function Game(): JSX.Element {
 
     const handleClick = (index: number) => {
       const square: string[] = squares.slice();
-      if (!square[index] && xIsNext === 'X') {
-        square[index] = 'X';
-        setXisNext('O');
-      } else {
-        square[index] = 'O';
-        setXisNext('X');
+      if (!square[index]) {
+        if (xIsNext === 'X') {
+          square[index] = 'X';
+          setXisNext('O');
+        } else {
+          square[index] = 'O';
+          setXisNext('X');
+        }
+        setCount(() => ++count);
+        setSquares(square);
       }
-      setSquares(square);
-      setCount(() => ++count);
     };
 
     const renderSquare = (index: number) => {
