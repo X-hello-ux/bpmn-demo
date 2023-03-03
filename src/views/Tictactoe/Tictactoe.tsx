@@ -37,14 +37,24 @@ export default function Game(): JSX.Element {
     };
 
     const renderSquare = (index: number) => {
-      return <Square value={squares[index]} onClick={() => !winner && handleClick(index)} />;
+      return <Square value={squares[index]} onClick={() => !winner?.winner && handleClick(index)} />;
     };
 
     let [status, setStatus] = React.useState('');
-    if (winner) {
-      status = 'Winner: ' + winner;
+
+    if (winner?.winner) {
+      status = 'Winner: ' + winner.winner;
+
+      const nodeList = Array.from(document.querySelectorAll('.square'));
+
+      nodeList.forEach((item, index) => {
+        if (winner.nodes.includes(index)) {
+          // @ts-ignore
+          item.style.background = 'yellow';
+        }
+      });
     } else {
-      count === 9 ? (status = 'The game was not settled !') : (status = 'Next player: ' + xIsNext);
+      count === 9 ? (status = 'dogfall') : (status = 'Next player: ' + xIsNext);
     }
 
     const reset = () => {
@@ -58,12 +68,12 @@ export default function Game(): JSX.Element {
       <div>
         <div style={{ display: 'flex' }}>
           <div className="status">{status}</div>
-          {count === 9 && !winner && (
+          {count === 9 && !winner?.winner && (
             <button style={{ marginLeft: 20 }} onClick={() => reset()}>
               Reset
             </button>
           )}
-          {winner && (
+          {winner?.winner && (
             <button style={{ marginLeft: 20 }} onClick={() => reset()}>
               Again
             </button>
@@ -102,7 +112,10 @@ export default function Game(): JSX.Element {
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-        return squares[a];
+        return {
+          winner: squares[a],
+          nodes: [a, b, c],
+        };
       }
     }
     return null;
