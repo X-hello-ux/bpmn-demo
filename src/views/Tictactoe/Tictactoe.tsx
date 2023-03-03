@@ -9,17 +9,9 @@ export default function Game(): JSX.Element {
     justifyContent: 'center',
   };
 
-  const Square = ({
-    value,
-    onClick,
-    onContextMenu,
-  }: {
-    value: number;
-    onClick: () => void;
-    onContextMenu: () => void;
-  }) => {
+  const Square = ({ value, onClick }: { value: number; onClick: () => void }) => {
     return (
-      <button className="square" onClick={e => onClick()} onContextMenu={e => onContextMenu()}>
+      <button className="square" onClick={e => onClick()}>
         {value}
       </button>
     );
@@ -28,42 +20,51 @@ export default function Game(): JSX.Element {
   const Board = () => {
     const [squares, setSquares] = React.useState(Array(9).fill(null));
     const [xIsNext, setXisNext] = React.useState('');
+    let [count, setCount] = React.useState(0);
+    const winner = calculateWinner(squares);
 
     const handleClick = (index: number) => {
       const square: string[] = squares.slice();
-      ((!square[index] && xIsNext === 'X') || xIsNext === '') && (square[index] = 'X');
+      if (!square[index] && xIsNext === 'X') {
+        square[index] = 'X';
+        setXisNext('O');
+      } else {
+        square[index] = 'O';
+        setXisNext('X');
+      }
       setSquares(square);
-      setXisNext('O');
-    };
-
-    const handleContextMenu = (index: number) => {
-      const square: string[] = squares.slice();
-      ((!square[index] && xIsNext === 'O') || xIsNext === '') && (square[index] = 'O');
-      setSquares(square);
-      setXisNext('X');
+      setCount(() => ++count);
     };
 
     const renderSquare = (index: number) => {
-      return (
-        <Square
-          value={squares[index]}
-          onClick={() => handleClick(index)}
-          onContextMenu={() => handleContextMenu(index)}
-        />
-      );
+      return <Square value={squares[index]} onClick={() => !winner && handleClick(index)} />;
     };
 
-    const winner = calculateWinner(squares);
-    let status;
+    let [status, setStatus] = React.useState('');
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
-      status = 'Next player: ' + xIsNext;
+      count === 9 ? (status = 'The game was not settled !') : (status = 'Next player: ' + xIsNext);
     }
 
     return (
       <div>
-        <div className="status">{status}</div>
+        <div style={{ display: 'flex' }}>
+          <div className="status">{status}</div>
+          {count === 9 && !winner && (
+            <button
+              style={{ marginLeft: 20 }}
+              onClick={() => {
+                setCount(0);
+                setXisNext('');
+                setSquares([]);
+                setStatus('');
+              }}
+            >
+              Reset
+            </button>
+          )}
+        </div>
         <div className="board-row">
           {renderSquare(0)}
           {renderSquare(1)}
