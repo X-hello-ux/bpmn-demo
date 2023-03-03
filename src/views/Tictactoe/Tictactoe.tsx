@@ -20,6 +20,7 @@ export default function Game(): JSX.Element {
     const [xIsNext, setXisNext] = React.useState('');
     let [count, setCount] = React.useState(0);
     const winner = calculateWinner(squares);
+    const nodeList = Array.from(document.querySelectorAll('.square'));
 
     const handleClick = (index: number) => {
       const square: string[] = squares.slice();
@@ -45,8 +46,6 @@ export default function Game(): JSX.Element {
     if (winner?.winner) {
       status = 'Winner: ' + winner.winner;
 
-      const nodeList = Array.from(document.querySelectorAll('.square'));
-
       nodeList.forEach((item, index) => {
         if (winner.nodes.includes(index)) {
           // @ts-ignore
@@ -62,6 +61,11 @@ export default function Game(): JSX.Element {
       setXisNext('');
       setSquares([]);
       setStatus('');
+
+      nodeList.forEach((item, index) => {
+        // @ts-ignore
+        item.style.background = '';
+      });
     };
 
     return (
